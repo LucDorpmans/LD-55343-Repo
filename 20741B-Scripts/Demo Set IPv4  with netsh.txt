@@ -1,0 +1,3 @@
+Netsh interface ipv4 set address name="Local Area Connection" source=static addr=10.10.0.10 mask=255.255.255.0 gateway=10.10.0.1 
+Netsh interface ipv4 set dns name="Local Area Connection" source=static addr=10.12.0.1 
+Netsh interface ipv4 add dns name="Local Area Connection" 10.12.0.2 index=2 

@@ -1,0 +1,23 @@
+# Demonstration Steps Configuring IPv4 by using the user interface
+
+# 1. On LON-SVR1, open the Network and Sharing Center.
+# 2. Open the Network Connections window.
+# 3. Open the London_Network adapter’s properties.
+# 4. Open the Internet Protocol Version 4 (TCP/IPv4) properties.
+# 5. Change the IP Address to 172.16.0.111.
+# 6. Click OK, and then close all open windows.
+
+#Configuring IPv4 by using Windows PowerShell
+
+# 1. Open Windows PowerShell.
+# 2. Check the IP address by running the following command:
+Get-NetIPAddress -InterfaceAlias “London_Network” 
+
+#3. Run the following command to remove the IP address:
+Remove-NetIPAddress -InterfaceAlias “London_Network” -IPAddress 172.16.0.111 
+
+#4. Verify the IP address was removed by running the following command:
+Get-NetIPAddress -InterfaceAlias “London_Network” 
+
+#5. Add the new IP address to the interface by running the following command:
+New-NetIPAddress -InterfaceAlias “London_Network” -IPAddress 172.16.0.11 -PrefixLength 24 

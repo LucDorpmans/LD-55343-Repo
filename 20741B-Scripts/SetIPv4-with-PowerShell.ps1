@@ -1,0 +1,2 @@
+New-NetIPAddress –InterfaceAlias "Local Area Connection" –IPAddress 10.10.0.10 -PrefixLength 24 –DefaultGateway 10.10.0.1 
+Set-DNSClientServerAddress –InterfaceAlias "Local Area Connection" -ServerAddresses 10.12.0.1,10.12.0.2 

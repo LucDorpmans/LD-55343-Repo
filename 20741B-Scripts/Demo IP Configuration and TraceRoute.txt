@@ -1,0 +1,15 @@
+# Demonstration Steps Using Get-NetIPAddress and ipconfig
+
+# On LON-SVR1, open a Windows PowerShell window and a Command Prompt window, and then show the windows side-by-side.
+Get-NetIPAddress -InterfaceAlias “London_Network” 
+ipconfig 
+
+
+# Using Test-NetConnection and ping
+Test-NetConnection 172.16.0.1 
+Ping 172.16.0.1 
+
+
+# Using Test-NetConnection –TraceRoute and tracert
+Test-NetConnection -TraceRoute 172.16.18.20 
+Tracert 172.16.18.20 
